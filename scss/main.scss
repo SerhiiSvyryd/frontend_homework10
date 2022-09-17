@@ -19,6 +19,23 @@ a {
     text-decoration: none; 
 }
 
-ul, li {
-    list-style: none; 
+.conteiner {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .picture>img {
+                padding-left: 70%;
+            }
+        }
+    }
 }

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+}
+.conteiner .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.conteiner .header .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.conteiner .header .logo .picture > img {
+  padding-left: 70%;
+}/*# sourceMappingURL=main.css.map */
