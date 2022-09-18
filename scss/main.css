@@ -1,3 +1,11 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../font/MyriadPro-Regular.eot");
+  src: local("../font/Myriad Pro Regular"), local("MyriadPro-Regular"), url("../font/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/MyriadPro-Regular.woff") format("woff"), url("../font/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +19,7 @@ html {
 }
 
 body {
+  font-family: "Myriad Pro";
   font-size: 1rem;
   line-height: 1;
 }
@@ -19,14 +28,23 @@ a {
   text-decoration: none;
 }
 
-.conteiner {
+/* Можно ли подключить к этому файлу подключить не только переменные, но и миксин? */
+.menu {
+  width: 35%;
+  padding-right: 10%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #6c6c6c;
 }
+
 .conteiner .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 1% 0;
 }
 .conteiner .header .logo {
@@ -34,7 +52,17 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
 }
 .conteiner .header .logo .picture > img {
   padding-left: 70%;
+}
+.conteiner .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+  background: url(../picture/fon.png);
+  background-size: 100%;
 }/*# sourceMappingURL=main.css.map */

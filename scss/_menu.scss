@@ -1,0 +1,11 @@
+/* Можно ли подключить к этому файлу подключить не только переменные, но и миксин? */
+.menu {
+    width: 35%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $fons;
+    color: #6c6c6c;
+}

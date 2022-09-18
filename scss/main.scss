@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../font/MyriadPro-Regular.eot');
+	src: local('../font/Myriad Pro Regular'), local('MyriadPro-Regular'),
+		url('../font/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../font/MyriadPro-Regular.woff') format('woff'),
+		url('../font/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {       
     margin: 0;
     padding: 0;
@@ -11,6 +22,7 @@ html {
 }
 
 body {
+    font-family: 'Myriad Pro';
     font-size: 1rem; 
     line-height: 1; 
 }
@@ -19,25 +31,32 @@ a {
     text-decoration: none; 
 }
 
+$fons: 1.3rem;
+$col: #ffffff;
+
+
+@import 'menu';
+@import 'mixin';
+
 .conteiner {
-    display: flex;
-    flex-direction: column;
 
     .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include setFlex(flex, row, space-between);
         padding: 1% 0;
 
         .logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            @include setFlex(); /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
 
             .picture>img {
                 padding-left: 70%;
             }
         }
+    }
+
+    .content {
+        @include setFlex();
+        padding: 2% 0;
+        background: url(../picture/fon.png);
+        background-size: 100%;
     }
 }
