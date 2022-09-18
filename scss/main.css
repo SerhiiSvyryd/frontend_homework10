@@ -59,6 +59,19 @@ a {
 .conteiner .header .logo .picture > img {
   padding-left: 70%;
 }
+.conteiner .cross {
+  position: absolute;
+  right: 420px;
+  top: 76px;
+  width: 20px;
+}
+.conteiner .cross::before {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 2px;
+  background: #5094f2;
+}
 .conteiner .content {
   padding: 2% 0;
   font-size: 1.5rem;
