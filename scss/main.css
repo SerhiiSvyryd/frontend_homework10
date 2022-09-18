@@ -38,9 +38,7 @@ a {
   align-items: center;
   font-size: 1.3rem;
   color: #6c6c6c;
-}
-
-/* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
+} /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
 .logo,
 .content,
 .aside,
@@ -74,6 +72,8 @@ a {
   text-align: center;
 }
 .conteiner .aside .aside__subtitle {
+  padding-bottom: 3%;
+  font-size: 1.3rem;
   color: #5094f2;
 }
 .conteiner .aside .aside__text {
@@ -81,8 +81,27 @@ a {
 }
 .conteiner .section {
   padding: 4% 0;
+  color: #6c6c6c;
+}
+.conteiner .section .section__block {
+  margin-left: 10%;
+}
+.conteiner .section .section__block .section__title {
+  margin-right: 1%;
+  padding-bottom: 12%;
+  color: #6c6c6c;
+  font-size: 1.8rem;
+}
+.conteiner .section .section__info {
+  width: 52%;
+  padding-left: 6%;
+  line-height: 36px;
+}
+.conteiner .section .section__info .caption {
+  font-size: 1.7rem;
 }
 .conteiner .footer {
   padding-bottom: 3%;
   text-align: center;
+  color: #6c6c6c;
 }/*# sourceMappingURL=main.css.map */

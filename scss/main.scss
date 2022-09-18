@@ -1,6 +1,7 @@
 $fons: 1.3rem;
-$col: #ffffff;
+$col: #6c6c6c;
 $coltit: #5094f2;
+
 
 @import 'reset';
 @import 'font';
@@ -33,7 +34,7 @@ $coltit: #5094f2;
         padding: 2% 0;
         font-size: 1.5rem;
         line-height: 44px;
-        color: $col;
+        color: #ffffff;
         background: url(../picture/fon.png);
         background-size: 100%;
     }
@@ -43,6 +44,8 @@ $coltit: #5094f2;
         text-align: center;
 
         .aside__subtitle {
+            padding-bottom: 3%;
+            font-size: $fons;
             color: $coltit;
         }
 
@@ -53,10 +56,34 @@ $coltit: #5094f2;
 
     .section {
         padding: 4% 0;
+        color: $col;
+
+        .section__block{
+            margin-left: 10% ;
+
+            .section__title {
+                margin-right: 1%;
+                padding-bottom: 12%;
+                color: $col;
+                font-size: 1.8rem;
+            }
+        }
+
+        .section__info {
+            width: 52%;
+            padding-left: 6%;
+            line-height: 36px;
+
+            .caption {
+                font-size: 1.7rem;
+            }
+        }
+
     }
 
     .footer {
         padding-bottom: 3%;
         text-align: center;
+        color: $col;
     }
 }
