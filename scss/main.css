@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Myriad Pro";
-  src: url("../font/MyriadPro-Regular.eot");
-  src: local("../font/Myriad Pro Regular"), local("MyriadPro-Regular"), url("../font/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/MyriadPro-Regular.woff") format("woff"), url("../font/MyriadPro-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +21,13 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../font/MyriadPro-Regular.eot");
+  src: local("../font/Myriad Pro Regular"), local("MyriadPro-Regular"), url("../font/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/MyriadPro-Regular.woff") format("woff"), url("../font/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Можно ли подключить к этому файлу подключить не только переменные, но и миксин? */
 .menu {
   width: 35%;
@@ -40,6 +40,17 @@ a {
   color: #6c6c6c;
 }
 
+/* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
+.logo,
+.content,
+.aside,
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .conteiner .header {
   display: flex;
   flex-direction: row;
@@ -47,22 +58,31 @@ a {
   align-items: center;
   padding: 1% 0;
 }
-.conteiner .header .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
-}
 .conteiner .header .logo .picture > img {
   padding-left: 70%;
 }
 .conteiner .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 2% 0;
+  font-size: 1.5rem;
+  line-height: 44px;
+  color: #ffffff;
   background: url(../picture/fon.png);
   background-size: 100%;
+}
+.conteiner .aside {
+  padding: 5% 0;
+  text-align: center;
+}
+.conteiner .aside .aside__subtitle {
+  color: #5094f2;
+}
+.conteiner .aside .aside__text {
+  padding: 0 16%;
+}
+.conteiner .section {
+  padding: 4% 0;
+}
+.conteiner .footer {
+  padding-bottom: 3%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

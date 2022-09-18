@@ -1,42 +1,19 @@
-@font-face {
-	font-family: 'Myriad Pro';
-	src: url('../font/MyriadPro-Regular.eot');
-	src: local('../font/Myriad Pro Regular'), local('MyriadPro-Regular'),
-		url('../font/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../font/MyriadPro-Regular.woff') format('woff'),
-		url('../font/MyriadPro-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-* {       
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px; 
-}
-
-body {
-    font-family: 'Myriad Pro';
-    font-size: 1rem; 
-    line-height: 1; 
-}
-
-a {
-    text-decoration: none; 
-}
-
 $fons: 1.3rem;
 $col: #ffffff;
+$coltit: #5094f2;
 
-
+@import 'reset';
+@import 'font';
 @import 'menu';
 @import 'mixin';
+
+/* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
+.logo,
+.content,
+.aside,
+.section {
+    @include setFlex();
+}
 
 .conteiner {
 
@@ -45,7 +22,6 @@ $col: #ffffff;
         padding: 1% 0;
 
         .logo {
-            @include setFlex(); /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
 
             .picture>img {
                 padding-left: 70%;
@@ -54,9 +30,33 @@ $col: #ffffff;
     }
 
     .content {
-        @include setFlex();
         padding: 2% 0;
+        font-size: 1.5rem;
+        line-height: 44px;
+        color: $col;
         background: url(../picture/fon.png);
         background-size: 100%;
+    }
+
+    .aside {
+        padding: 5% 0;
+        text-align: center;
+
+        .aside__subtitle {
+            color: $coltit;
+        }
+
+        .aside__text {
+            padding: 0 16%;
+        }
+    }
+
+    .section {
+        padding: 4% 0;
+    }
+
+    .footer {
+        padding-bottom: 3%;
+        text-align: center;
     }
 }
