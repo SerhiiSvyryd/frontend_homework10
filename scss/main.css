@@ -67,6 +67,31 @@ a {
   background: url(../picture/fon.png);
   background-size: 100%;
 }
+.conteiner .content .image {
+  padding-right: 10%;
+}
+.conteiner .content .desc {
+  padding-left: 5%;
+}
+.conteiner .content .desc .subject {
+  font-size: 2.5rem;
+}
+.conteiner .content .desc .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 8%;
+  padding-right: 1%;
+  background-color: #5094f2;
+}
+.conteiner .content .desc .button .icon {
+  padding: 4% 5% 1% 1%;
+}
+.conteiner .content .desc .button .button__box {
+  color: #fff;
+}
 .conteiner .aside {
   padding: 5% 0;
   text-align: center;
