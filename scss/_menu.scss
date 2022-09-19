@@ -7,5 +7,49 @@
     justify-content: space-around;
     align-items: center;
     font-size: $fons;
-    color: $col;
+    
+    .menu__item--primary::before,
+    .menu__item--secondary::before,
+    .menu__item--specialy::before,
+    .menu__item--aditionary::before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: $coltit;
+        top: 76px;
+        height: 2px;
+        opacity: 0;
+    }
+
+    .menu__item--primary::before {
+        right: 457px;
+        width: 63px;
+    }
+
+    .menu__item--secondary::before {
+        right: 355px;
+        width: 85px;
+        }
+    
+    .menu__item--specialy::before {
+        right: 257px;
+        width: 80px;
+        }
+
+    .menu__item--aditionary::before {
+        right: 157px;
+        width: 80px;
+        }
+
+        .menu__item--primary:hover:before,
+        .menu__item--secondary:hover:before,
+        .menu__item--specialy:hover:before,
+        .menu__item--aditionary:hover:before {
+            opacity: 1;
+        }
+        
+    .link {
+        color: $col;
+    }
+
 }

@@ -37,8 +37,46 @@ a {
   justify-content: space-around;
   align-items: center;
   font-size: 1.3rem;
+}
+.menu .menu__item--primary::before,
+.menu .menu__item--secondary::before,
+.menu .menu__item--specialy::before,
+.menu .menu__item--aditionary::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #5094f2;
+  top: 76px;
+  height: 2px;
+  opacity: 0;
+}
+.menu .menu__item--primary::before {
+  right: 457px;
+  width: 63px;
+}
+.menu .menu__item--secondary::before {
+  right: 355px;
+  width: 85px;
+}
+.menu .menu__item--specialy::before {
+  right: 257px;
+  width: 80px;
+}
+.menu .menu__item--aditionary::before {
+  right: 157px;
+  width: 80px;
+}
+.menu .menu__item--primary:hover:before,
+.menu .menu__item--secondary:hover:before,
+.menu .menu__item--specialy:hover:before,
+.menu .menu__item--aditionary:hover:before {
+  opacity: 1;
+}
+.menu .link {
   color: #6c6c6c;
-} /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
+}
+
+/* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
 .logo,
 .content,
 .aside,
@@ -58,19 +96,6 @@ a {
 }
 .conteiner .header .logo .picture > img {
   padding-left: 70%;
-}
-.conteiner .cross {
-  position: absolute;
-  right: 420px;
-  top: 76px;
-  width: 20px;
-}
-.conteiner .cross::before {
-  content: "";
-  display: block;
-  width: 85px;
-  height: 2px;
-  background: #5094f2;
 }
 .conteiner .content {
   padding: 2% 0;
