@@ -96,7 +96,7 @@ a {
 }
 .conteiner .header .header__logo:hover {
   transform: scale(0.9);
-  transition: 1s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .conteiner .header .header__logo .header__picture > img {
@@ -147,9 +147,52 @@ a {
   padding: 5% 0;
   text-align: center;
 }
+.conteiner .aside .aside__image--primary,
+.conteiner .aside .aside__image--secondary,
+.conteiner .aside .aside__image--spacial {
+  width: 46%;
+  margin: 0 27%;
+  padding: 10% 0;
+  font-size: 100px;
+  color: white;
+  border-radius: 102px;
+}
+.conteiner .aside .aside__image--primary:hover,
+.conteiner .aside .aside__image--secondary:hover,
+.conteiner .aside .aside__image--spacial:hover {
+  background-color: rgb(67, 182, 25);
+}
+.conteiner .aside .aside__image--primary {
+  background-color: #5094f2;
+}
+.conteiner .aside .aside__image--secondary {
+  background-color: #d94748;
+}
+.conteiner .aside .aside__image--spacial {
+  background-color: #ebbb11;
+}
 .conteiner .aside .aside__subtitle {
-  padding-bottom: 3%;
+  padding: 5% 0 3%;
   font-size: 1.3rem;
+}
+.conteiner .aside .aside__subtitle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  transition: width 3s;
+  background: rgb(255, 15, 99);
+  opacity: 0;
+}
+.conteiner .aside .aside__subtitle:hover:after {
+  opacity: 1;
+  width: 64px;
+  margin: 0 6%;
+  padding: 0 5%;
+  transition: width 1s, padding 1s, margin 1s;
+}
+.conteiner .aside .aside__link {
   color: #5094f2;
 }
 .conteiner .aside .aside__text {

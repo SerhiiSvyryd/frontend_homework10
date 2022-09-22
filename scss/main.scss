@@ -25,7 +25,7 @@ $coltit: #5094f2;
         .header__logo {
             &:hover {
                 transform: scale(0.9);
-                transition: 1s;
+                transition: 0.2s;
                 cursor: pointer;
             }
 
@@ -85,12 +85,61 @@ $coltit: #5094f2;
         padding: 5% 0;
         text-align: center;
 
-        .aside__subtitle {
-            padding-bottom: 3%;
-            font-size: $fons;
-            color: $coltit;
+        .aside__image--primary,
+        .aside__image--secondary,
+        .aside__image--spacial {
+            width: 46%;
+            margin: 0 27%;
+            padding: 10% 0;
+            font-size: 100px;
+            color: white;
+            border-radius: 102px;
+            &:hover {
+                background-color: rgb(67, 182, 25);
+            }
         }
 
+        .aside__image--primary {
+            background-color: $coltit;
+        }
+
+        .aside__image--secondary {
+            background-color: #d94748;
+        }
+
+        .aside__image--spacial {
+            background-color: #ebbb11;
+        }
+
+        .aside__subtitle {
+            padding: 5% 0 3%;
+            font-size: $fons;
+        }
+        
+        .aside__subtitle::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 0;
+            transition: width 3s;
+            background: rgb(255, 15, 99);
+            opacity: 0;
+        }
+
+        .aside__subtitle:hover:after {
+            opacity: 1;
+            width: 64px;
+            margin: 0 6%;
+            padding: 0 5%;
+            transition: width 1s, padding 1s, margin 1s;
+        }
+
+        .aside__link {
+            color: $coltit;
+            
+        }
+    
         .aside__text {
             padding: 0 16%;
         }
