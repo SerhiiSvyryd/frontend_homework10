@@ -9,7 +9,7 @@ $coltit: #5094f2;
 @import 'mixin';
 
 /* Как правильно объединять свойства, где именно они должны быть написаны в коде, в контейнере или до контейнера??? Есть одинаковые свойства для блока лого и для блока контент. */
-.logo,
+.header__logo,
 .content,
 .aside,
 .section {
@@ -22,10 +22,19 @@ $coltit: #5094f2;
         @include setFlex(flex, row, space-between);
         padding: 1% 0;
 
-        .logo {
+        .header__logo {
+            &:hover {
+                transform: scale(0.9);
+                transition: 1s;
+                cursor: pointer;
+            }
 
-            .picture>img {
+            .header__picture>img {
                 padding-left: 70%;
+            }
+
+            .title__link {
+                color: black;
             }
         }
     }
@@ -38,11 +47,11 @@ $coltit: #5094f2;
         background: url(../picture/fon.png);
         background-size: 100%;
 
-        .image {
+        .content__image {
             padding-right: 10%;
         }
 
-        .desc {
+        .content__desc {
             padding-left: 5%;
 
             .subject {
@@ -52,9 +61,13 @@ $coltit: #5094f2;
             .button {
                 @include setFlex();
                 width: 50%;
-                margin-top: 8%;
+                margin: 8% 0 0 4%;
                 padding-right: 1%;
                 background-color: $coltit;
+                &:hover {
+                    transform: scale(1.3);
+                    transition: 0.5s;
+                }
 
                 .icon {
                     padding: 4% 5% 1% 1%;
